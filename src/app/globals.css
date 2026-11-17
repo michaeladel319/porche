@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-porsche-black: #080808;
+  --color-porsche-gray: #1A1A1A;
+  --color-porsche-white: #FFFFFF;
+  --color-porsche-red: #D5001C;
+  --color-porsche-blue: #00D4FF;
+  --color-porsche-gold: #FFD700;
+  
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: var(--color-porsche-white);
+  --foreground: var(--color-porsche-black);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (pointer: fine) and (min-width: 768px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-porsche-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-porsche-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Peachy Gradient Background */
+.peachy-gradient {
+  background: linear-gradient(180deg, #ffd3b6 0%, #fdfdfd 40%, #f4f4f4 80%, #ebebeb 100%);
+}
